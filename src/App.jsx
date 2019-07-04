@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Count from './modules/counts/counts.component';
 import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class Apps extends Component {
+
+    render() {
+        return (
+            <Router>
+                <Route path="/" exact component={Count} />
+            </Router>
+        )
+    }
 }
 
-export default App;
+export default Apps;
