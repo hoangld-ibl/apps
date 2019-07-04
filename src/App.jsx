@@ -8,7 +8,8 @@ class Apps extends Component {
     render() {
         return (
             <Router>
-                <Route path="/" exact component={Count} />
+                <Route path="/count" exact component={Count} />
+                <Route exact component={Count} />
             </Router>
         )
     }
